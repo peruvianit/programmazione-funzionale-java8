@@ -6,7 +6,7 @@ package it.peruvianit.java8.core.service.impl;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
-import it.peruvianit.java8.core.service.HelloLambdaService;
+import it.peruvianit.java8.core.service.IHelloLambda;
 import it.peruvianit.java8.core.service.LambdaService;
 
 /**
@@ -29,9 +29,9 @@ public class LambdaServiceImpl implements LambdaService {
 	@Override
 	public String helloLambda( final String message) {
 		
-		HelloLambdaService helloLambdaService = (str_capitalize) -> { return StringUtils.capitalize(str_capitalize);}; 
+		IHelloLambda helloLambda = (str_capitalize) -> { return StringUtils.capitalize(str_capitalize);}; 
 		
-		return message + ",stata capitalizata : " + helloLambdaService.message(message);
+		return message + ",stata capitalizata : " + helloLambda.message(message);
 	}
 
 	
