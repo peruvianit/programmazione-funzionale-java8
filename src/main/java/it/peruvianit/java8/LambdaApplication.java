@@ -9,6 +9,7 @@ import org.springframework.context.ApplicationContext;
 
 import it.peruvianit.java8.core.service.CollectionService;
 import it.peruvianit.java8.core.service.LambdaService;
+import it.peruvianit.java8.core.service.ScopeService;
 
 @SpringBootApplication
 public class LambdaApplication {
@@ -37,6 +38,14 @@ public class LambdaApplication {
 		collectionService.ordena(list);
 		
 		list.forEach((String ele) -> System.out.println(ele));
+		
+		// Scope Variabile
+		
+		ScopeService scopeService = applicationContext.getBean(ScopeService.class);
+		
+		System.out.println(scopeService.provaLocalVariabile(3, 5));
+		System.out.println(scopeService.provaAttributiVariabileStatici(5, 5));
+		
 	}
 
 }
