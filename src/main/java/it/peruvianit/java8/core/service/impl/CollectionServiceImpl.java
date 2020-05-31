@@ -3,7 +3,6 @@
  */
 package it.peruvianit.java8.core.service.impl;
 
-import java.util.Collections;
 import java.util.List;
 
 import org.springframework.stereotype.Service;

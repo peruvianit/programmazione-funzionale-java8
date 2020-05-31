@@ -51,7 +51,7 @@ public class ScopeServiceImpl implements ScopeService {
 			 *  
 			 */
 			
-			double risultato = d1 + d2;
+			risultato = d1 + d2;
 			return  message + risultato;
 		};
 		
