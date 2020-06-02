@@ -10,6 +10,7 @@ import org.springframework.context.ApplicationContext;
 import it.peruvianit.java8.core.service.CollectionService;
 import it.peruvianit.java8.core.service.InterfaceFunzionale;
 import it.peruvianit.java8.core.service.LambdaService;
+import it.peruvianit.java8.core.service.RiferimentoMetodi;
 import it.peruvianit.java8.core.service.ScopeService;
 
 @SpringBootApplication
@@ -51,6 +52,11 @@ public class LambdaApplication {
 		
 		InterfaceFunzionale InterfaceFunzionale = applicationContext.getBean(InterfaceFunzionale.class);
 		System.out.println(InterfaceFunzionale.message());
+		
+		// Riferimento Metodi
+		
+		RiferimentoMetodi riferimentoMetodi = applicationContext.getBean(RiferimentoMetodi.class);
+		riferimentoMetodi.testRiferimentoStatico();
 	}
 
 }
