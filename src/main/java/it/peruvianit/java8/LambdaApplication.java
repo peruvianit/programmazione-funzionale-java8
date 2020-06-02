@@ -57,6 +57,9 @@ public class LambdaApplication {
 		
 		RiferimentoMetodi riferimentoMetodi = applicationContext.getBean(RiferimentoMetodi.class);
 		riferimentoMetodi.testRiferimentoStatico();
+		riferimentoMetodi.testRiferimentoMetodoIstanzaOggettoArbitrario();
+		riferimentoMetodi.testRiferimentoMetodoIstanzaOggetto();
+		riferimentoMetodi.testRiferimentoMetodoConstruttore();
 	}
 
 }

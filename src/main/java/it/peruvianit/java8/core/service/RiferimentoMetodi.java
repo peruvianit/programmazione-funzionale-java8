@@ -12,4 +12,10 @@ package it.peruvianit.java8.core.service;
 public interface RiferimentoMetodi {
 
 	void testRiferimentoStatico();
+	
+	void testRiferimentoMetodoIstanzaOggettoArbitrario(); 
+	
+	void testRiferimentoMetodoIstanzaOggetto();
+	
+	void testRiferimentoMetodoConstruttore();
 }
