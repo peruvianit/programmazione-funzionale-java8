@@ -3,6 +3,8 @@
  */
 package it.peruvianit.java8.core.service;
 
+import it.peruvianit.java8.view.PersonaView;
+
 /**
  * @author Sergio Arellano {PeruViANit}
  *
@@ -10,8 +12,6 @@ package it.peruvianit.java8.core.service;
  * @since 1.0.1
  */
 @FunctionalInterface
-public interface IOperation {
-
-	String provaLocalVariabile(double a, double b);
-	
+public interface IPersona {
+	PersonaView crear(String nome, String cognome);
 }
