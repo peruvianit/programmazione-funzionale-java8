@@ -7,11 +7,9 @@ package it.peruvianit.java8.core.service;
  * @author Sergio Arellano {PeruViANit}
  *
  * @version 1.0.0
- * @since 1.0.1
+ * @since 1.0.2
  */
 @FunctionalInterface
-public interface IOperation {
-
-	String provaLocalVariabile(double a, double b);
-	
+public interface IRiferimentoMetodi {
+	void riferimentoMetodo();
 }
