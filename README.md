@@ -1,6 +1,4 @@
-=====
 # programmazione-funzionale-java8
-=====
 
 """Lambda."""
 
@@ -8,7 +6,7 @@ Requisisti
 ============
 
 * IDE Java
-* Jdk 1.87+
+* Jdk 1.8+
 
 Utilizo
 =======
