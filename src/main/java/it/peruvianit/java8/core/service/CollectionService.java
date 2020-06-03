@@ -25,5 +25,11 @@ public interface CollectionService {
 	 */
 	void ordena(List<String> list);
 	
+	void utilizzoForEach();
+	
+	void utilizzoRemoveIf();
+	
+	void utlizzoSort();
+	
 	String info();
 }

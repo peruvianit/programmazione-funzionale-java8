@@ -60,6 +60,16 @@ public class LambdaApplication {
 		riferimentoMetodi.testRiferimentoMetodoIstanzaOggettoArbitrario();
 		riferimentoMetodi.testRiferimentoMetodoIstanzaOggetto();
 		riferimentoMetodi.testRiferimentoMetodoConstruttore();
+		
+		// foreach, removeIf e Sort
+		
+		System.out.println("\nutilizzoForEach:");
+		collectionService.utilizzoForEach();
+		System.out.println("\nutilizzoRemoveIf:");
+		collectionService.utilizzoRemoveIf();
+		System.out.println("\nutlizzoSort:");
+		collectionService.utlizzoSort();
+		
 	}
 
 }
