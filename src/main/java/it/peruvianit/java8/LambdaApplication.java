@@ -10,6 +10,7 @@ import org.springframework.context.ApplicationContext;
 import it.peruvianit.java8.core.service.CollectionService;
 import it.peruvianit.java8.core.service.InterfaceFunzionale;
 import it.peruvianit.java8.core.service.LambdaService;
+import it.peruvianit.java8.core.service.OptionalService;
 import it.peruvianit.java8.core.service.RiferimentoMetodi;
 import it.peruvianit.java8.core.service.ScopeService;
 import it.peruvianit.java8.core.service.StreamService;
@@ -84,6 +85,20 @@ public class LambdaApplication {
 		streamService.limitare();
 		System.out.println("\ncontare:");
 		System.out.println(streamService.contare());
+		
+		// Optional
+		
+		OptionalService optionalService = applicationContext.getBean(OptionalService.class);
+		System.out.println("\nprova:");
+		optionalService.prova(null);
+		System.out.println("\norElse:");
+		optionalService.orElse(null);
+		System.out.println("\norElseThrow:");
+		// optionalService.orElseThrow(null); // Genera una eccezione
+		System.out.println("\nprova:");
+		optionalService.prova(null);
+		System.out.println("\nisPresent:");
+		optionalService.isPresent("valore");
 		
 	}
 
