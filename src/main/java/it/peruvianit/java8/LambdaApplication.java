@@ -12,6 +12,7 @@ import it.peruvianit.java8.core.service.InterfaceFunzionale;
 import it.peruvianit.java8.core.service.LambdaService;
 import it.peruvianit.java8.core.service.RiferimentoMetodi;
 import it.peruvianit.java8.core.service.ScopeService;
+import it.peruvianit.java8.core.service.StreamService;
 
 @SpringBootApplication
 public class LambdaApplication {
@@ -67,8 +68,22 @@ public class LambdaApplication {
 		collectionService.utilizzoForEach();
 		System.out.println("\nutilizzoRemoveIf:");
 		collectionService.utilizzoRemoveIf();
-		System.out.println("\nutlizzoSort:");
+		
 		collectionService.utlizzoSort();
+		
+		// Stream
+		
+		StreamService streamService = applicationContext.getBean(StreamService.class);
+		System.out.println("\nfilter:");
+		streamService.filtrare();
+		System.out.println("\nordinare:");
+		streamService.ordinare();
+		System.out.println("\ntransformare:");
+		streamService.transformare();
+		System.out.println("\nlimitare:");
+		streamService.limitare();
+		System.out.println("\ncontare:");
+		System.out.println(streamService.contare());
 		
 	}
 
