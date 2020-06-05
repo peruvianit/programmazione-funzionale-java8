@@ -16,6 +16,7 @@ import it.peruvianit.java8.core.service.OptionalService;
  * @version 1.0.0
  * @since 1.5.0
  */
+@SuppressWarnings("unused")
 @Service
 public class OptionalServiceImpl implements OptionalService {
 

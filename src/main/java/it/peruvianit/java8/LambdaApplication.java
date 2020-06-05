@@ -10,6 +10,7 @@ import org.springframework.context.ApplicationContext;
 import it.peruvianit.java8.core.service.CollectionService;
 import it.peruvianit.java8.core.service.InterfaceFunzionale;
 import it.peruvianit.java8.core.service.LambdaService;
+import it.peruvianit.java8.core.service.MapService;
 import it.peruvianit.java8.core.service.OptionalService;
 import it.peruvianit.java8.core.service.RiferimentoMetodi;
 import it.peruvianit.java8.core.service.ScopeService;
@@ -108,6 +109,22 @@ public class LambdaApplication {
 		streamParalleloService.leggereNumeriStream();
 		System.out.println("\nstream parallelo:");
 		streamParalleloService.leggereNumeriStreamParallelo();
+		
+		// Mapa
+		
+		MapService mapService = applicationContext.getBean(MapService.class);
+		System.out.println("\nmapa java7:");
+		mapService.leggereJava7();
+		System.out.println("\nmapa java8:");
+		mapService.leggereJava8();
+		System.out.println("\nmapa recolettare:");
+		mapService.recolettare();
+		System.out.println("\nmapa aggiungere se assente:");
+		mapService.aggiungereSeAssente();
+		System.out.println("\nmapa operare se presente:");
+		mapService.operareSePresente();
+		System.out.println("\nmapa ottenere predeterminato:");
+		mapService.OttenerePredeterminato();
 	}
 
 }
