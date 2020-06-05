@@ -8,6 +8,9 @@ import org.springframework.stereotype.Service;
 import it.peruvianit.java8.core.service.StreamParalleloService;
 
 /**
+ * 
+ * {@literal https://blog.overops.com/benchmark-how-java-8-lambdas-and-streams-can-make-your-code-5-times-slower/}
+ * 
  * @author Sergio Arellano {PeruViANit}
  *
  * @version 1.0.0
