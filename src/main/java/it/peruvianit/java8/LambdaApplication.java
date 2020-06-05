@@ -13,6 +13,7 @@ import it.peruvianit.java8.core.service.LambdaService;
 import it.peruvianit.java8.core.service.OptionalService;
 import it.peruvianit.java8.core.service.RiferimentoMetodi;
 import it.peruvianit.java8.core.service.ScopeService;
+import it.peruvianit.java8.core.service.StreamParalleloService;
 import it.peruvianit.java8.core.service.StreamService;
 
 @SpringBootApplication
@@ -100,6 +101,13 @@ public class LambdaApplication {
 		System.out.println("\nisPresent:");
 		optionalService.isPresent("valore");
 		
+		// Stream Parallelo
+		
+		StreamParalleloService streamParalleloService = applicationContext.getBean(StreamParalleloService.class);
+		System.out.println("\nstream standard:");
+		streamParalleloService.leggereNumeriStream();
+		System.out.println("\nstream parallelo:");
+		streamParalleloService.leggereNumeriStreamParallelo();
 	}
 
 }
