@@ -20,7 +20,7 @@ import it.peruvianit.java8.core.service.StreamService;
 @SpringBootApplication
 public class LambdaApplication {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		//SpringApplication.run(LambdaApplication.class, args);
 		ApplicationContext applicationContext = SpringApplication.run(LambdaApplication.class, args);
 		
@@ -125,6 +125,18 @@ public class LambdaApplication {
 		mapService.operareSePresente();
 		System.out.println("\nmapa ottenere predeterminato:");
 		mapService.OttenerePredeterminato();
+		
+		// LocalDate LocalTime LocalDateTime
+		
+		DateApiService dateApiService = applicationContext.getBean(DateApiService.class);
+		System.out.println("\ncomparazione data:");
+		dateApiService.comparazioneDataOra();
+		System.out.println("\nmmisura Tempo:");
+		dateApiService.misuraTempo();
+		System.out.println("\ndifferenza tra date:");
+		dateApiService.differenzaTraDate();
+		System.out.println("\ntransformare(DateTimeFormatter):");
+		dateApiService.transformare();
 	}
 
 }
