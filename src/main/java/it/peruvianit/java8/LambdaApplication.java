@@ -8,6 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 
 import it.peruvianit.java8.core.service.CollectionService;
+import it.peruvianit.java8.core.service.FunzioniAltoOrdineService;
 import it.peruvianit.java8.core.service.InterfaceFunzionale;
 import it.peruvianit.java8.core.service.LambdaService;
 import it.peruvianit.java8.core.service.MapService;
@@ -137,6 +138,16 @@ public class LambdaApplication {
 		dateApiService.differenzaTraDate();
 		System.out.println("\ntransformare(DateTimeFormatter):");
 		dateApiService.transformare();
+		
+		// Funzioni Alto Livello
+		
+		FunzioniAltoOrdineService funzioniAltoOrdineService = applicationContext.getBean(FunzioniAltoOrdineService.class);
+		System.out.println("\nconvertire stringa:");
+		funzioniAltoOrdineService.convertirStringa("PerUViAN");
+		System.out.println("\naggiungendo un preffiso a una stringa:");
+		System.out.println(funzioniAltoOrdineService.visualizza("SERARI").apply("00001"));
+		System.out.println("\ndifferenza tra date:");
+		funzioniAltoOrdineService.filtrare(list, System.out::println,5 );
 	}
 
 }
