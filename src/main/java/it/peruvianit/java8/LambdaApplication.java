@@ -145,9 +145,15 @@ public class LambdaApplication {
 		System.out.println("\nconvertire stringa:");
 		funzioniAltoOrdineService.convertirStringa("PerUViAN");
 		System.out.println("\naggiungendo un preffiso a una stringa:");
-		System.out.println(funzioniAltoOrdineService.visualizza("SERARI").apply("00001"));
+		System.out.println(funzioniAltoOrdineService.prefisso("SERARI").apply("00001"));
 		System.out.println("\ndifferenza tra date:");
 		funzioniAltoOrdineService.filtrare(list, System.out::println,5 );
+		System.out.println("\naggiungendo un suffiso a una stringa con [UnaryOperator]:");
+		System.out.println(funzioniAltoOrdineService.suffiso("ARISE").apply("00001"));
+		System.out.println("\nutilizzo di [BiFunction]:");
+		System.out.println(funzioniAltoOrdineService.multiplicazione().apply(5, 3));
+		System.out.println("\nutilizzo di [BiFunction]:");
+		System.out.println(funzioniAltoOrdineService.leftPad().apply("Sergio",10));
 	}
 
 }

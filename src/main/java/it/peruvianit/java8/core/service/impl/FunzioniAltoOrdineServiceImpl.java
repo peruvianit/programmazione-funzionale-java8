@@ -4,9 +4,12 @@
 package it.peruvianit.java8.core.service.impl;
 
 import java.util.List;
+import java.util.function.BiFunction;
+import java.util.function.BinaryOperator;
 import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Predicate;
+import java.util.function.UnaryOperator;
 
 import org.springframework.stereotype.Service;
 
@@ -58,7 +61,7 @@ public class FunzioniAltoOrdineServiceImpl implements FunzioniAltoOrdineService 
 	 * (String str) è il parametro in Input
 	 */
 	@Override
-	public Function<String, String> visualizza(String prefisso) {
+	public Function<String, String> prefisso(String prefisso) {
 		return (String str) -> prefisso + "_" + str;
 	}
 
@@ -75,5 +78,49 @@ public class FunzioniAltoOrdineServiceImpl implements FunzioniAltoOrdineService 
 	
 	private Predicate<String> evaluaLunghezza(int lunghezza){
 		return (String str) -> str.length() >= lunghezza;
+	}
+
+	/**
+	 * 
+	 * <pre>
+	 * è inclussa nelle funzioni chiamate <strong>Function Operator</strong> 
+	 * UnaryOperator : Utilizza il stesso tipo di dato come Input/Output 
+	 * </pre>
+	 */
+	@Override
+	public UnaryOperator<String> suffiso(String suffiso) {
+		return (String str) -> str + "_" +  suffiso;
+	}
+
+	/**
+	 * Quando se bisogna passare più di un  argomento, se può utilizzare 
+	 * {@code BiFunction}
+	 * 
+	 * @since 1.0.10
+	 */
+	@Override
+	public BiFunction<Integer, Integer, Integer> multiplicazione() {
+		return (Integer ope1,Integer ope2) -> ope1 * ope2;
+	}
+
+	/**
+	 * Stesso concetto di UnaryOperator però adesso con
+	 * BiFunction : Utilizza il stesso tipo di dato come Input1/Input12/Output 
+	 * 
+	 * @since 1.0.10
+	 */
+	@Override
+	public BinaryOperator<Integer> divizione() {
+		return (Integer ope1,Integer ope2) -> ope1 / ope2;
+	}
+
+	/**
+	 * Scondo espemio di BiFuncion
+	 * 
+	 *  @since 1.0.10
+	 */
+	@Override
+	public BiFunction<String, Integer, String> leftPad() {
+		return (String str, Integer numeriSpazi) -> String.format("%" + numeriSpazi + "s ", str);
 	}
 }
