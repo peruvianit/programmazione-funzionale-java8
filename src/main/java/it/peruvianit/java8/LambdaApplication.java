@@ -7,6 +7,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 
+import it.peruvianit.java8.common.util.AgeUtils;
 import it.peruvianit.java8.core.service.CollectionService;
 import it.peruvianit.java8.core.service.FunzioniAltoOrdineService;
 import it.peruvianit.java8.core.service.InterfaceFunzionale;
@@ -154,6 +155,12 @@ public class LambdaApplication {
 		System.out.println(funzioniAltoOrdineService.multiplicazione().apply(5, 3));
 		System.out.println("\nutilizzo di [BiFunction]:");
 		System.out.println(funzioniAltoOrdineService.leftPad().apply("Sergio",10));
+		
+		// FunctionalInterface - Livello intermedio
+		
+		AgeUtils ageUtils = new AgeUtils();
+		System.out.print("\nAnni passati dal 09/07/2003 sono: ");
+		System.out.println(ageUtils.calculateAge.apply(9, 7, 2003));
 	}
 
 }
