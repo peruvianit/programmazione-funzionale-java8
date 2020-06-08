@@ -43,9 +43,13 @@ public class RiferimentoMetodiImp implements RiferimentoMetodi{
 		
 		System.out.println(ReflectionToStringBuilder.toString(personaView, ToStringStyle.MULTI_LINE_STYLE));
 	}
+	
+	/**
+	 * Per usare il riferimento per parametro le funzione devono avere
+	 * le stessa quantita di parametri che generano il stesso risultato
+	 */
 	@Override
 	public void testRiferimentoStatico() {
-		// TODO Auto-generated method stub
 		
 		IRiferimentoMetodi riferimentoMetodi = RiferimentoMetodiImp::riferimentoMetodoStatico;
 		
@@ -59,6 +63,10 @@ public class RiferimentoMetodiImp implements RiferimentoMetodi{
 		
 	}
 	
+	/**
+	 * Per usare il riferimento per parametro le funzione devono avere
+	 * le stessa quantita di parametri che generano il stesso risultato
+	 */
 	@Override
 	public void testRiferimentoMetodoIstanzaOggetto() {
 		RiferimentoMetodiImp riferimentoMetodiImp = new RiferimentoMetodiImp();
