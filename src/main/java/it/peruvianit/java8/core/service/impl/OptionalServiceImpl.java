@@ -70,13 +70,26 @@ public class OptionalServiceImpl implements OptionalService {
 	/**
 	 * Se il oggetto è presente allora elaboro il dato
 	 * 
-	 * @since 
+	 * @since 1.0.12
 	 */
 	@Override
 	public void ifPresent(String valore) {
 		Optional<String> optional = Optional.ofNullable(valore);
 		
 		optional.ifPresent(str -> System.out.println(str));
+	}
+
+	/*
+	 * Utilizziamo un test in linea passando un predicate
+	 *  @since 1.0.12
+	 */
+	@Override
+	public void filter(String valore) {
+		Optional<String> optional = Optional.of(valore);
+		
+		System.out.println("El numero selezzionato era 2020 : " + 
+					optional.filter(str -> str.equals("2020")).isPresent());
+		
 	}
 
 }

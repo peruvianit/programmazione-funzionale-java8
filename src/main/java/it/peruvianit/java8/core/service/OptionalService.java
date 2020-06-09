@@ -24,5 +24,8 @@ public interface OptionalService {
 	void isPresent(String valore);
 	
 	void ifPresent(String valore);
+	
+	void filter(String valore);
+	
 
 }
