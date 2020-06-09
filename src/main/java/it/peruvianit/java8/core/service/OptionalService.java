@@ -22,5 +22,7 @@ public interface OptionalService {
 	void orElseThrow(String valore);
 	
 	void isPresent(String valore);
+	
+	void ifPresent(String valore);
 
 }

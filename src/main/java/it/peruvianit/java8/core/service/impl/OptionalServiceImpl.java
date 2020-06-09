@@ -67,4 +67,16 @@ public class OptionalServiceImpl implements OptionalService {
 
 	}
 
+	/**
+	 * Se il oggetto è presente allora elaboro il dato
+	 * 
+	 * @since 
+	 */
+	@Override
+	public void ifPresent(String valore) {
+		Optional<String> optional = Optional.ofNullable(valore);
+		
+		optional.ifPresent(str -> System.out.println(str));
+	}
+
 }
