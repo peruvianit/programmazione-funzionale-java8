@@ -161,6 +161,13 @@ public class LambdaApplication {
 		AgeUtils ageUtils = new AgeUtils();
 		System.out.print("\nAnni passati dal 09/07/2003 sono: ");
 		System.out.println(ageUtils.calculateAge.apply(9, 7, 2003));
+		
+		// Optional Baeldung
+		System.out.println("\nifpresent:");
+		optionalService.ifPresent("Sergio");
+		System.out.println("\nfilter:");
+		optionalService.filter("2020");
+		
 	}
 
 }
