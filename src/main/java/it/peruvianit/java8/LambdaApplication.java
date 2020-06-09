@@ -168,6 +168,10 @@ public class LambdaApplication {
 		System.out.println("\nfilter:");
 		optionalService.filter("2020");
 		
+		// Lambda
+		System.out.println("\ninfo:");
+		lambdaService.infoApplicazione();
+		
 	}
 
 }
