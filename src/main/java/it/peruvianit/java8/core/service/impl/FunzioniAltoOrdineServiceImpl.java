@@ -16,6 +16,11 @@ import org.springframework.stereotype.Service;
 import it.peruvianit.java8.core.service.FunzioniAltoOrdineService;
 
 /**
+ * <pre>
+ * Come sa Java che tipo di dato è in input o output ?? 
+ * A eso se le conoce <strong>inferenza di tipo</strong>, java se incarica di validare
+ * che tipo di dato che se le sta passando alla funzione correspondano.
+ * </pre>
  * @author Sergio Arellano {PeruViANit}
  *
  * @version 1.0.0
