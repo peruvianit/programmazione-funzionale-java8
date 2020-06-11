@@ -20,6 +20,8 @@ import it.peruvianit.java8.core.service.FunzioniAltoOrdineService;
  * Come sa Java che tipo di dato è in input o output ?? 
  * A eso se le conoce <strong>inferenza di tipo</strong>, java se incarica di validare
  * che tipo di dato che se le sta passando alla funzione correspondano.
+ * 
+ * Le funzioni lavorano sui oggetti non su tipo di dato primitivo
  * </pre>
  * @author Sergio Arellano {PeruViANit}
  *

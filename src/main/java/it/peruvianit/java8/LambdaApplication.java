@@ -9,6 +9,7 @@ import org.springframework.context.ApplicationContext;
 
 import it.peruvianit.java8.common.util.AgeUtils;
 import it.peruvianit.java8.core.service.CollectionService;
+import it.peruvianit.java8.core.service.ComposizioniFunzioniService;
 import it.peruvianit.java8.core.service.FunzioniAltoOrdineService;
 import it.peruvianit.java8.core.service.InterfaceFunzionale;
 import it.peruvianit.java8.core.service.LambdaService;
@@ -168,6 +169,14 @@ public class LambdaApplication {
 		System.out.println("\nfilter:");
 		optionalService.filter("2020");
 		
+		// Lambda
+		System.out.println("\ninfo:");
+		lambdaService.infoApplicazione();
+		
+		// Composizioni di funzioni
+		ComposizioniFunzioniService composizioniFunzioniService = applicationContext.getBean(ComposizioniFunzioniService.class);
+		System.out.println("\ninfo:");
+		composizioniFunzioniService.operazione(5);
 	}
 
 }

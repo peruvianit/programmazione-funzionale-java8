@@ -1,4 +1,4 @@
-/**
+ /**
  * 
  */
 package it.peruvianit.java8.core.service.impl;
@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
 import it.peruvianit.java8.core.service.IHelloLambda;
+import it.peruvianit.java8.core.service.IInfoApplicazione;
 import it.peruvianit.java8.core.service.LambdaService;
 
 /**
@@ -32,6 +33,20 @@ public class LambdaServiceImpl implements LambdaService {
 		IHelloLambda helloLambda = (str_capitalize) -> { return StringUtils.capitalize(str_capitalize);}; 
 		
 		return message + ",stata capitalizata : " + helloLambda.message(message);
+	}
+
+	/**
+	 * Utilizzo di una lambda senza valore di ritorno
+	 * 
+	 * @since 1.0.13
+	 */
+	@Override
+	public void infoApplicazione() {
+		IInfoApplicazione infoApplicazione = () -> {
+			System.out.println("Applicazione per utilizzo delle nuove feactures di Java8");
+		};
+		
+		infoApplicazione.infoApplicazione();
 	}
 
 	
