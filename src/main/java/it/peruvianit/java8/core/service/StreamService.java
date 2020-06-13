@@ -24,6 +24,8 @@ public interface StreamService {
 	
 	long contare();
 	
+	void stream();
+	
 	default List<String> lista(){
 		List<String> linguaggi = new ArrayList<>();
 		
@@ -32,6 +34,7 @@ public interface StreamService {
 		linguaggi.add("Pyhton");
 		linguaggi.add("Scala");
 		linguaggi.add("Go");
+		linguaggi.add("Pascal");
 		
 		return linguaggi;
 		

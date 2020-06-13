@@ -177,6 +177,9 @@ public class LambdaApplication {
 		ComposizioniFunzioniService composizioniFunzioniService = applicationContext.getBean(ComposizioniFunzioniService.class);
 		System.out.println("\ninfo:");
 		composizioniFunzioniService.operazione(5);
+		
+		// Stream - Livello intermedio
+		streamService.stream();
 	}
 
 }
