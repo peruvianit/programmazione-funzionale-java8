@@ -6,6 +6,7 @@ package it.peruvianit.java8.core.service.impl;
 import java.util.Optional;
 import java.util.stream.Stream;
 
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Service;
 
 import it.peruvianit.java8.core.service.StreamService;
@@ -76,8 +77,7 @@ public class StreamServiceImpl implements StreamService {
 		// Crea un nuovo stream da uno esistente
 		
 		System.out.println("\ncrea un nuovo stream da uno esistente");
-		Stream<Integer> lunghezzaParola = linguaggi.map(ele -> ele.length());
-		lunghezzaParola.forEach(System.out::println);
+		Stream<Integer> lunghezzaParola = lista().stream().map(ele -> ele.length());
 
 		// Linguaggio con la parola più lunga
 		
@@ -97,7 +97,7 @@ public class StreamServiceImpl implements StreamService {
 		// leggerlo più di una volta : "lista().stream()"
 		System.out.println("\nfiltrare per la creazione di un nuovo stream");		
 		// Stream<String> linguaggiConP = lista().stream().filter(ele -> ele.startsWith("P")); CREA EXCEPTION
-		Stream<String> linguaggiConP = linguaggioSimbolo.filter(ele -> ele.startsWith("P")); // Per non avere eccezioni, utilizzo il stream precedente
+		Stream<String> linguaggiConP =  lista().stream().filter(ele -> ele.startsWith("P")); // Per non avere eccezioni, utilizzo il stream precedente
 		linguaggiConP.forEach(System.out::println);
 		// Stream a partire di una List<String>
 		// Peek : legge solo il stream senza alterarlo
@@ -110,8 +110,7 @@ public class StreamServiceImpl implements StreamService {
          * .collect(Collectors.toList());
 		 */
 		System.out.println("\nstream a partire di una List<String>: !");	
-		Stream<String> linguaggiConP2 = lista().stream().filter(ele -> ele.startsWith("P")); 
-		linguaggiConP2.peek(System.out::println);
+		lista().stream().filter(e -> StringUtils.isNoneBlank(e)).peek(System.out::println); // Non funziona, controllare
 		
 	}
 
